@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 기본사양 -->
+    <meta property="og:title" content="Welcome to BGY's portfolio.">
+    <meta property="og:description" content="Welcome to BGY's portfolio.">
+    <meta property="og:url" content="https://bgy4321.github.io/Portfolio/index">
+    <meta property="og:image" content="https://bgy4321.github.io/Portfolio/images/selectworkbg.jpg">
+    <meta name="twitter:card" content="요약">
+    <meta name="twitter:title" content="Welcome to BGY's portfolio.">
+    <meta name="twitter:url" content="https://bgy4321.github.io/Portfolio/index">
+    <meta name="twitter:image" content="https://bgy4321.github.io/Portfolio/images/selectworkbg.jpg">
+    <meta name="twitter:description" content="Welcome to BGY's portfolio.">
+
+    <!--평준화/폰트/파비콘-->
+    <link rel="stylesheet" href="common/reset.css">    
+    <link rel="stylesheet" href="common/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <title>BGY's portfolio</title>
+    <style>
+        body{
+            position: relative;
+            /* font-family: 'NanumSquare', 'Roboto', sans-serif; */
+        }
+        ::selection {
+		background-color: purple;
+		color: #fff;
+	    }
+
+        /*상단/좌우 고정 부분*/
+        .nav{
+            position: fixed; top: 0; left: 60px;
+            width: calc(100% - 120px); height: 80px;
+            margin:0 auto; z-index: 1;
+            display: flex; flex-direction: row; background-color: #fff;
+        }
+        .nav p{
+            padding: 18.5px 0; padding-left: 10px;
+            position: relative;
+        }
+        .nav a > img{
+            position: absolute;
+            top: 18.5px;
+        }
+        .nav p>a{            
+            position: absolute; top: 18.5px; left: 45px;
+            text-decoration: none; font-size: 2em; font-weight: bold;
+            color: #000000;
+        }
+        .left{
+            width: 60px; height: 100vh;
+            position: fixed; top: 0; left: 0;
+            background-color: #fff;
+        }
+        .left p{
+            text-align: center;
+            width: 1000px;
+            transform: rotate(270deg);
+            transform-origin: right center;
+            position: absolute; top: 0; right: 50%;
+            white-space: nowrap;
+        }
+        .right{
+            z-index: 10;
+            width: 60px; height: 100vh;
+            position: fixed; top: 0; right: 0;
+        }
+        .right .righttxt{
+            text-align: center;
+            width: 1000px;
+            transform: rotate(90deg); transform-origin: left center;
+            position: absolute; top: 0; left: 50%;
+            white-space: nowrap;
+        }
+        .right .rightmenu{
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif; font-size: 1.2em; font-weight: 700;
+            z-index: 2;
+            position: fixed; top: 80px; right: -360px;
+            width: 360px; height: calc(100vh - 80px);
+            background-color: #fff;
+            transition: 0.4s ease-in;
+        }
+        .rightmenu a{
+            display: block;
+            height:100%; width:100%;
+            color: inherit;
+            background-color: inherit;
+            text-decoration: none;
+        }
+        .right:hover .rightmenu{
+            right: 0px;
+        }
+        .rightmenu li:hover{
+            background-color: #999; color: #fff;
+        }
+        .right .rightmenu:hover .righttxt{
+            display: none;
+        }
+        .right .rightmenu li{
+            width: 300px; height: 15.23vh;
+            box-sizing: border-box; padding: 30px 0 30px 30px;
+        }
+
+
+        /*가로사이즈 고정 및 중앙배열 */
+        header, .intro, .portfolio, footer{
+            display: block;
+            width: calc(100% - 120px);
+            margin: 0 auto;
+        }
+
+
+        /*메인 타이틀페이지*/
+        header{
+            margin-top: 80px; 
+            height: calc(100vh - 80px);
+            font-family: 'Roboto' sans-serif;
+        }
+        header h1{
+            margin: 0;
+            font-size: 180px; font-weight: 700;
+            text-align: center; 
+            padding-top: 200px; padding-bottom: 80px;
+        }
+        header p{
+            font-size: 28px; font-weight: 500;
+            text-align: center; line-height: 40px;
+        }
+        header p em{
+            font-weight: 700; font-style: italic;
+        }
+        header p span{
+            color: #fff; background-color: #000;
+        }
+        header img{
+            display: block; margin: 30px auto;
+        }
+
+
+        /*자기소개*/
+        .intro{
+            font-family: 'NanumSquare', 'Roboto', sans-serif;
+            height: 1480px;
+            background-color: #e9e8ef;
+            padding: 140px 150px 0 150px; box-sizing: border-box;
+        }
+        .intro .introtitle:first-child{
+            font-family: 'Roboto', sans-serif; font-size: 86px; font-weight: 700;
+            color: #e9e8ef;
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+            padding-bottom: 65px;
+        }
+        .intro #bgyphoto{
+            position: absolute; top: 1264px; right: 150px;
+            width: 621px;
+        }
+        .intro .infobox {padding: 30px 0;}
+        .intro .infobox h2{font-family: 'Roboto', sans-serif; font-size: 40px; font-weight: 700;}
+        .intro .infobox p{font-size: 34px; padding-top: 30px; text-indent:50px;}
+        .intro .infobox span{font-size: 16px;} 
+        .intro .skillbox {padding: 30px 0;}
+        .intro .skillbox h2{font-family: 'Roboto', sans-serif; font-size: 40px; font-weight: 700;}
+        .intro .skillbox p{font-size: 34px;text-indent:50px; font-weight: 700; margin-top: 30px;}
+        .intro .skillbox .subtxt{font-size: 18px; font-weight: 500; padding: 5px 0 20px 0; margin: 0;}
+        .intro .skillbox span{font-size: 18px; font-weight: 700;}
+        .intro .skillbox img{padding-left:50px;}
+
+        /*포트폴리오 소개*/
+        .portfolio{
+            font-family: 'Roboto', sans-serif;
+            height: 1300px;
+            background: url(images/workbg.png) no-repeat; background-size: cover;
+            padding: 140px 150px 0 150px; box-sizing: border-box;
+        }
+        .portfolio .portfoliotitle:first-child{
+            font-size: 86px; font-weight: 700; -webkit-text-fill-color: transparent; 
+            color: transparent;
+            background-image: url(images/selectworkbg.jpg); -webkit-background-clip: text;
+            background-clip: text; padding-bottom: 65px;
+        }
+        .portfolio .portcontainer{
+            display: flex;
+            flex-direction: row; flex-wrap: wrap;
+            justify-content:center;
+            margin: 0 auto; padding: 0 100px;
+            box-sizing: border-box;
+        }
+        .portfolio .portbox{
+            flex: 1 1 30%;
+            width: 17.5vw; height: 410px;
+            background-color: rgba(220, 220, 220, 0.8);
+            margin: 10px; padding: 30px; box-sizing: border-box;
+        }
+        .portfolio .portbox a{
+            display: block;
+            height:100%; width:100%;
+            color: black;
+        }
+        .portfolio .box1, .portfolio .box4{
+            margin-left: 0px;
+        }
+        .portfolio .portbox p{
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .portfolio .portbox p>span, .portfolio .portbox p>strong{
+            font-size: 14px;
+        }
+
+        /*footer*/
+        footer{
+            height: calc(100vh - 80px);
+            font-family: 'Roboto' sans-serif;
+            position: relative;
+        }
+        footer #pointer{
+            position: absolute; top: 120px; left: 50%;
+            transform:translate(-50%, -50%);
+        }
+        footer h1{
+            position: absolute; top: 180px; left: 50%;
+            transform:translate(-50%, -50%);
+            margin: 0;
+            font-size: 86px; font-weight: 700;
+        }
+        footer .talkbox{
+            color: #fff;
+        }
+        footer .talkbox h3{
+            font-size: 34px;font-weight: 500;
+        }
+        footer .talkbox p{
+            font-size: 26px;font-weight: 700;
+        }
+        footer #phoneimg{
+            position: absolute; top: 41%; left: 24%;
+        }
+        footer #emailimg{
+            position: absolute; top: 59%; right: 24%;
+        }
+        footer .phone{
+            position: relative;
+            background: #000000;
+            width: 30vw; height: 110px;
+            border-radius: 15px;
+            top: 45%; left: 48%;
+            transform:translate(-50%, -50%);
+            padding: 22px 0 22px 40px; box-sizing: border-box;
+        }
+        footer .phone:after{
+            right: 100%;
+	        top: 60%;
+	        border: solid transparent;
+	        content: "";
+	        height: 0;
+	        width: 0;
+	        position: absolute;
+	        pointer-events: none;
+	        border-color: rgba(0, 0, 0, 0);
+	        border-right-color: #000000;
+	        border-width: 20px;
+	        margin-top: -30px;
+        }
+        footer .email{
+            text-align: right;
+            font-display: right;
+            position: relative;
+            background: #000000;
+            width: 30vw; height: 110px;
+            border-radius: 15px;
+            top: 50%; left: 52%;
+            transform:translate(-50%, -50%);
+            padding: 22px 40px 22px 0;
+            box-sizing: border-box;
+        }
+        footer .email:after{
+            left: 100%;
+	        top: 60%;
+	        border: solid transparent;
+	        content: "";
+	        height: 0;
+	        width: 0;
+	        position: absolute;
+	        pointer-events: none;
+	        border-color: rgba(0, 0, 0, 0);
+	        border-left-color: #000000;
+	        border-width: 20px;
+	        margin-top: -30px;
+        }
+        footer a{
+            color: #000;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+            position: absolute;
+            bottom: 30px; left: 50%;
+            transform:translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+
+    </script>
+    </head>
+
+    <body>
+        <!--copyright(상단바-모바일 숨김)-->
+        <div class="nav">
+            <a href="index.html"><img src="images/house.svg" alt="home"></a>
+            <p><a href="index.html">BGY</a></p>
+        </div>
+        <!-- HEADER -->
+        <header style="background: url(images/title.jpg) no-repeat; background-size: cover;">
+            <h1>Say Hello!</h1>
+            <p>My name is <span><em>Ban Ga-yeong</em>,</span><br>
+            The meaning of the my korean name <span><em>"nice to see you"</em>  :-)</span></p>
+            <a href="#first"><img src="images/triangle.png" alt="하단으로 이동"></a>
+        </header>
+        <!--copyright (왼쪽 고정-모바일 숨김)-->
+        <div class="left">
+            <P><strong>GAYEONG BAN 2020</strong> - ALL RIGHTS RESERVED</P>
+        </div>
+        <!--hover Menu(오른쪽 고정-모바일은 변경)-->
+
+        <div class="right">
+            <p class="righttxt">VIEW ALL WORKS - <strong>HOVER ME</strong></>
+            <div class="rightmenu">
+                <ul>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>APP UI/UX Update</p>
+                            <img src="images/.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>APP Promotion MV</p>
+                            <img src="images/.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>Event Page Design</p>
+                            <img src="images/.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>Company <br>Homepage<strong>(Main/Sub)</strong></p>
+                            <img src="images/.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>APP UI Update</p>
+                            <img src="images/.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>COMMING SOON!</p>
+                            <img src="images/.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--자기소개-->
+        <section class="intro" id="first">
+            <h2 class="introtitle">INTRODUCE<br>MY SELF.</h2>
+            <div class="infobox">
+                <h2>NAME</h2>
+                <p>반가영<span>(Ban Ga-yeong)</span></p>
+            </div>
+            <div class="infobox">
+                <h2>PHONE</h2>
+                <p>010 - 4494 - 4326</p>
+            </div>
+            <div class="skillbox">
+                <h2>SKILL</h2>
+                <div class="skillstatus">
+                    <p>Design<span>(Photoshop / Illustlator)</span></p>
+                    <p class="subtxt">- UI / UX 디자인 및 WEB / APP 디자인 가능</p>
+                    <img src="images/pcstatbar1.png" alt="statbar1">
+                </div>
+                <div class="skillstatus">
+                    <p>Coding<span>(HTML / CSS / Javascript / JQuery)</span></p>
+                    <p class="subtxt">- WEB / APP 퍼블리싱 가능</p>
+                    <img src="images/pcstatbar2.png" alt="statbar2">
+                </div>
+                <div class="skillstatus">
+                    <p>Prototype<span>(Adobe XD)</span></p>
+                    <p class="subtxt">- WEB / APP 프로토타입 제작 가능</p>
+                    <img src="images/pcstatbar3.png" alt="statbar3">
+                </div>
+                <div class="skillstatus">
+                    <p>Video<span>(After effect)</span></p>
+                    <p class="subtxt">- 템플릿을 활용한 간단한 영상 제작 및 편집 가능</p>
+                    <img src="images/pcstatbar4.png" alt="statbar4">
+                </div>
+                <img src="images/photo.png" alt="bgyphoto" id="bgyphoto">
+            </div>
+        </section>
+        <!--포트폴리오 소개-->
+        <section class="portfolio">
+            <h2 class="portfoliotitle">SELECT<br>MY WORK.</h2>
+            <div class="portcontainer">
+                <div class="portbox box1">
+                    <a href="subpage_1.html">
+                        <p>APP UI/UX Update</p>
+                        <p><span>MOBILE</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box2">
+                    <a href="subpage_1.html">
+                        <p>APP Promotion MV</p>
+                        <p><span>VIDEO</span></p>
+                        <img src="images/.png" alt="">
+                    </a>
+                </div>
+                <div class="portbox box3">
+                    <a href="subpage_1.html">
+                        <p>Event Page Design</p>
+                        <p><span>WEB/MOBILE</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box4">
+                    <a href="subpage_1.html">
+                        <p>Company <br>Homepage<strong>(Main/Sub)</strong></p>
+                        <p><span>WEB/MOBILE</span></p>
+                        <img src="images/.png" alt="">
+                    </a>
+                </div>
+                <div class="portbox box5">
+                    <a href="subpage_1.html">
+                        <p>APP UI Update</p>
+                        <p><span>MOBILE</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box6">
+                    <a href="subpage_1.html">
+                        <p>COMMING SOON!</p>
+                        <p><span>WHO'S NEXT?</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+        <footer style="background: url(images/footer.jpg) no-repeat; background-size: cover;">
+            <img src="images/point.png" alt="따옴표" id="pointer">
+            <h1>Let's Talk!</h1>
+            <img src="images/call.png" alt="phone" id="phoneimg">
+            <div class="phone talkbox">
+                <h3>PHONE</h3>
+                <p>010-4494-4326</p>
+            </div>
+            <img src="images/email.png" alt="Email" id="emailimg">
+            <div class="email talkbox">
+                <h3>EMAIL</h3>
+                <p>kerah807@gmail.com</p>
+            </div>
+            <a href="index.html">&#9650; BACK TO TOP</a>
+        </footer>
+    </body>
+</html>
