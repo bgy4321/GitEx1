@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+body{
+    position: relative;
+    /* font-family: 'NanumSquare', 'Roboto', sans-serif; */
+}
+::selection {
+background-color: purple;
+color: #fff;
+}
+
+/*상단/좌우 고정 부분*/
+.nav{
+    position: fixed; top: 0; left: 60px;
+    width: calc(100% - 120px); height: 80px;
+    margin:0 auto; z-index: 1;
+    display: flex; flex-direction: row; background-color: #fff;
+}
+.nav p{
+    padding: 18.5px 0; padding-left: 10px;
+    position: relative;
+}
+.nav a > img{
+    position: absolute;
+    top: 18.5px;
+}
+.nav p>a{            
+    position: absolute; top: 18.5px; left: 45px;
+    text-decoration: none; font-size: 2em; font-weight: bold;
+    color: #000000;
+}
+.left{
+    width: 60px; height: 100vh;
+    font-size: 18px;
+    position: fixed; top: 0; left: 0;
+    background-color: #fff;
+}
+.left p{
+    text-align: center;
+    width: 100vh;
+    transform: rotate(270deg);
+    transform-origin: right center;
+    position: absolute; top: 0; right: 50%;
+    white-space: nowrap;
+}
+
+
+.right{
+    z-index:9999;
+     height: 100vh;
+    position: fixed; top: 0; right: 0;cursor: pointer;
+    transform: translateX(330px);transition:0.5s;
+}
+.right .righttxt{
+    text-align: center;
+    width: 100vh;background-color: #fff;
+    height:60px; line-height:60px;
+    font-size: 18px;
+    transform: rotate(90deg); transform-origin: left center; 
+    position: absolute; top: 0;
+    white-space: nowrap;
+    z-index: 2;
+}
+.right .rightmenu{
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.2em; font-weight: 700;
+    margin-top: 80px;
+    width: 360px; height:100vh;
+    background-color: #fff;
+    
+}
+.rightmenu a{
+    display: block;
+    height:100%; width:100%;
+    color: inherit;
+    background-color: inherit;
+    text-decoration: none;
+}
+.rightmenu li:hover{
+    background-color: #999; color: #fff;
+}
+.right .rightmenu li{
+    width: 360px; height: 15.23vh;
+    box-sizing: border-box; padding: 30px 0 30px 60px;
+}
+.active{ transform: translateX(0);}
+
+
+/*가로사이즈 고정 및 중앙배열 */
+header, .intro, .portfolio, footer{
+    display: block;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+}
+
+
+/*메인 타이틀페이지*/
+header{
+    margin-top: 80px; 
+    height: calc(100vh - 80px);
+    font-family: 'Roboto', sans-serif;
+}
+header h1{
+    margin: 0;
+    font-size: 180px; font-weight: 700;
+    text-align: center; 
+    padding-top: 19vh; padding-bottom: 80px;
+}
+header p{
+    font-size: 28px; font-weight: 500;
+    text-align: center; line-height: 40px;
+}
+header p em{
+    font-weight: 700; font-style: italic;
+}
+header p span{
+    color: #fff; background-color: #000;
+}
+header img{
+    display: block; margin: 30px auto;
+    animation: loading 1s infinite alternate; 
+}
+@keyframes loading {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(5px);
+    }
+}
+
+
+/*자기소개*/
+.intro{
+    font-family: 'NanumSquare', 'Roboto', sans-serif;
+    height: 1480px;
+    background-color: #e9e8ef;
+    padding: 140px 150px 0 150px; box-sizing: border-box;
+}
+.intro .introtitle:first-child{
+    font-family: 'Roboto', sans-serif; font-size: 86px; font-weight: 700;
+    color: #e9e8ef;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    padding-bottom: 65px;
+}
+.intro #bgyphoto{
+    position: absolute; top: 1264px; right: 150px;
+    width: 32.344vw;
+}
+.intro .infobox {padding: 30px 0;}
+.intro .infobox h2{font-family: 'Roboto', sans-serif; font-size: 40px; font-weight: 700;}
+.intro .infobox p{font-size: 34px; padding-top: 30px; text-indent:50px;}
+.intro .infobox span{font-size: 16px;} 
+.intro .skillbox {padding: 30px 0;}
+.intro .skillbox h2{font-family: 'Roboto', sans-serif; font-size: 40px; font-weight: 700;}
+.intro .skillbox p{font-size: 34px;text-indent:50px; font-weight: 700; margin-top: 30px;}
+.intro .skillbox .subtxt{font-size: 18px; font-weight: 500; padding: 5px 0 20px 0; margin: 0;}
+.intro .skillbox span{font-size: 18px; font-weight: 700;}
+.intro .skillbox img{padding-left:50px;}
+
+/*포트폴리오 소개*/
+.portfolio{
+    font-family: 'Roboto', sans-serif;
+    height: 1300px;
+    background: url(../images/workbg.png) no-repeat; background-size: cover;
+    padding: 140px 150px 0 150px; box-sizing: border-box;
+}
+.portfolio .portfoliotitle:first-child{
+    font-size: 86px; font-weight: 700; -webkit-text-fill-color: transparent; 
+    color: transparent;
+    background: url(../images/selectworkbg.png) no-repeat;
+    padding-bottom: 65px;
+}
+.portfolio .portcontainer{
+    display: flex;
+    flex-direction: row; flex-wrap: wrap;
+    justify-content:center;
+    margin: 0 auto; padding: 0 100px;
+    box-sizing: border-box;
+}
+.portfolio .portbox{
+    flex: 1 1 30%;
+    width: 17.5vw; height: 43vh;
+    background-color: rgba(220, 220, 220, 0.8);
+    margin: 10px; padding: 30px; box-sizing: border-box;
+}
+.portfolio .portbox a{
+    display: block;
+    height:100%; width:100%;
+    color: black;
+}
+.portfolio .box1, .portfolio .box4{
+    margin-left: 0px;
+}
+.portfolio .portbox p{
+    font-size: 1.750em;
+    font-weight: 700;
+}
+
+.portfolio .portbox p>span, .portfolio .portbox p>strong{
+    font-size: 14px;
+}
+
+/*footer*/
+footer{
+    height: calc(100vh - 80px);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+footer #pointer{
+    position: absolute; top: 120px; left: 50%;
+    transform:translate(-50%, -50%);
+}
+footer h1{
+    position: absolute; top: 180px; left: 50%;
+    transform:translate(-50%, -50%);
+    margin: 0;
+    font-size: 86px; font-weight: 700;
+}
+footer .talkbox{
+    color: #fff;
+}
+footer .talkbox h3{
+    font-size: 34px;font-weight: 500;
+}
+footer .talkbox p{
+    font-size: 26px;font-weight: 700;
+}
+footer #phoneimg{
+    position: absolute; top: 41%; left: 24%;
+}
+footer #emailimg{
+    position: absolute; top: 59%; right: 24%;
+}
+footer .phone{
+    position: relative;
+    background: #000000;
+    width: 30vw; height: 110px;
+    border-radius: 15px;
+    top: 45%; left: 48%;
+    transform:translate(-50%, -50%);
+    padding: 22px 0 22px 40px; box-sizing: border-box;
+}
+footer .phone:after{
+    right: 100%;
+    top: 60%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-right-color: #000000;
+    border-width: 20px;
+    margin-top: -30px;
+}
+footer .email{
+    text-align: right;
+    position: relative;
+    background: #000000;
+    width: 30vw; height: 110px;
+    border-radius: 15px;
+    top: 50%; left: 52%;
+    transform:translate(-50%, -50%);
+    padding: 22px 40px 22px 0;
+    box-sizing: border-box;
+}
+footer .email:after{
+    left: 100%;
+    top: 60%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-left-color: #000000;
+    border-width: 20px;
+    margin-top: -30px;
+}
+footer a{
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 30px; left: 50%;
+    transform:translate(-50%, -50%);
+}

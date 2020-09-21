@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 기본사양 -->
+    <meta property="og:title" content="Welcome to BGY's portfolio.">
+    <meta property="og:description" content="Welcome to BGY's portfolio.">
+    <meta property="og:url" content="https://bgy4321.github.io/Portfolio/index">
+    <meta property="og:image" content="https://bgy4321.github.io/Portfolio/images/selectworkbg.jpg">
+    <meta name="twitter:card" content="요약">
+    <meta name="twitter:title" content="Welcome to BGY's portfolio.">
+    <meta name="twitter:url" content="https://bgy4321.github.io/Portfolio/index">
+    <meta name="twitter:image" content="https://bgy4321.github.io/Portfolio/images/selectworkbg.jpg">
+    <meta name="twitter:description" content="Welcome to BGY's portfolio.">
+
+    <!--평준화/폰트/파비콘-->
+    <link rel="stylesheet" href="common/reset.css">    
+    <link rel="stylesheet" href="common/normalize.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <title>BGY's portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.right').click(function(){
+                $('.right').toggleClass('active');
+            });
+        });
+    </script>
+    </head>
+
+    <body>
+        <!--copyright(상단바-모바일 숨김)-->
+        <div class="nav">
+            <a href="index.html"><img src="images/house.svg" alt="home"></a>
+            <p><a href="index.html">BGY</a></p>
+        </div>
+        <!-- HEADER -->
+        <header style="background: url(images/title.jpg) no-repeat; background-size: cover;">
+            <h1>Say Hello!</h1>
+            <p>My name is <span><em>Ban Ga-yeong</em>,</span><br>
+            The meaning of the my korean name <span><em>"nice to see you"</em>  :-)</span></p>
+            <a href="#first"><img src="images/triangle.png" alt="하단으로 이동"></a>
+        </header>
+        <!--copyright (왼쪽 고정-모바일 숨김)-->
+        <div class="left">
+            <P><strong>GAYEONG BAN 2020</strong> - ALL RIGHTS RESERVED</P>
+        </div>
+        <!--hover Menu(오른쪽 고정-모바일은 변경)-->
+
+        <div class="right">
+            
+            <div class="rightmenu"> <!--style="visibility: hidden;"-->
+                <ul>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>APP UI/UX Update</p>
+                            <!--<img src="images/.png" alt="">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>APP Promotion MV</p>
+                            <!--<img src="images/.png" alt="">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>Event Page Design</p>
+                            <!--<img src="images/.png" alt="">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>Company <br>Homepage<strong>(Main/Sub)</strong></p>
+                            <!--<img src="images/.png" alt="">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>APP UI Update</p>
+                            <!--<img src="images/.png" alt="">-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subpage_1.html">
+                            <p>COMMING SOON!</p>
+                            <!--<img src="images/.png" alt="">-->
+                        </a>
+                    </li>
+                </ul>
+                <p class="righttxt">VIEW ALL WORKS - <strong>CLICK ME</strong></p>
+            </div>
+        </div>
+        <!--자기소개-->
+        <section class="intro" id="first">
+            <h2 class="introtitle">INTRODUCE<br>MY SELF.</h2>
+            <div class="infobox">
+                <h2>NAME</h2>
+                <p>반가영<span>(Ban Ga-yeong)</span></p>
+            </div>
+            <div class="infobox">
+                <h2>PHONE</h2>
+                <p>010 - 4494 - 4326</p>
+            </div>
+            <div class="skillbox">
+                <h2>SKILL</h2>
+                <div class="skillstatus">
+                    <p>Design<span>(Photoshop / Illustlator)</span></p>
+                    <p class="subtxt">- UI / UX 디자인 및 WEB / APP 디자인 가능</p>
+                    <img src="images/pcstatbar1.png" alt="statbar1">
+                </div>
+                <div class="skillstatus">
+                    <p>Coding<span>(HTML / CSS / Javascript / JQuery)</span></p>
+                    <p class="subtxt">- WEB / APP 퍼블리싱 가능</p>
+                    <img src="images/pcstatbar2.png" alt="statbar2">
+                </div>
+                <div class="skillstatus">
+                    <p>Prototype<span>(Adobe XD)</span></p>
+                    <p class="subtxt">- WEB / APP 프로토타입 제작 가능</p>
+                    <img src="images/pcstatbar3.png" alt="statbar3">
+                </div>
+                <div class="skillstatus">
+                    <p>Video<span>(After effect)</span></p>
+                    <p class="subtxt">- 템플릿을 활용한 간단한 영상 제작 및 편집 가능</p>
+                    <img src="images/pcstatbar4.png" alt="statbar4">
+                </div>
+                <img src="images/photo.png" alt="bgyphoto" id="bgyphoto">
+            </div>
+        </section>
+        <!--포트폴리오 소개-->
+        <section class="portfolio">
+            <h2 class="portfoliotitle">SELECT<br>MY WORK.</h2>
+            <div class="portcontainer">
+                <div class="portbox box1">
+                    <a href="subpage_1.html">
+                        <p>APP UI/UX Update</p>
+                        <p><span>MOBILE</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box2">
+                    <a href="subpage_1.html">
+                        <p>APP Promotion MV</p>
+                        <p><span>VIDEO</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box3">
+                    <a href="subpage_1.html">
+                        <p>Event Page Design</p>
+                        <p><span>WEB/MOBILE</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box4">
+                    <a href="subpage_1.html">
+                        <p>Company <br>Homepage<br><strong>(Main/Sub)</strong></p>
+                        <p><span>WEB/MOBILE</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box5">
+                    <a href="subpage_1.html">
+                        <p>APP UI Update</p>
+                        <p><span>MOBILE</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+                <div class="portbox box6">
+                    <a href="subpage_1.html">
+                        <p>COMMING SOON!</p>
+                        <p><span>WHO'S NEXT?</span></p>
+                        <!--<img src="images/.png" alt="">-->
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+        <footer style="background: url(images/footer.jpg) no-repeat; background-size: cover;">
+            <img src="images/point.png" alt="따옴표" id="pointer">
+            <h1>Let's Talk!</h1>
+            <img src="images/call.png" alt="phone" id="phoneimg">
+            <div class="phone talkbox">
+                <h3>PHONE</h3>
+                <p>010-4494-4326</p>
+            </div>
+            <img src="images/email.png" alt="Email" id="emailimg">
+            <div class="email talkbox">
+                <h3>EMAIL</h3>
+                <p>kerah807@gmail.com</p>
+            </div>
+            <a href="index.html">&#9650; BACK TO TOP</a>
+        </footer>
+    </body>
+</html>
