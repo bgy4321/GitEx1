@@ -54,7 +54,8 @@ body{
   transform: translateX(330px);transition:0.5s;
 }
 .right .righttxt{
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   text-align: center;
   width: 100vh; background-color: #fff;
   height:60px; line-height:60px;
