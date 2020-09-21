@@ -31,6 +31,7 @@ body{
   color: #000000;
 }
 .left{
+  font-family: 'Roboto', sans-serif; 
   width: 60px; height: 100vh;
   font-size: 18px;
   position: fixed; top: 0; left: 0;
@@ -53,6 +54,7 @@ body{
   transform: translateX(330px);transition:0.5s;
 }
 .right .righttxt{
+  font-family: 'Roboto', sans-serif; 
   text-align: center;
   width: 100vh; background-color: #fff;
   height:60px; line-height:60px;
