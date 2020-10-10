@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/*메인 내비게이션*/
+header{ width: 100%; height: 100px; border-bottom: 1px solid #6b99cf; border-top: 15px solid #6b99cf; overflow: hidden; position: relative;}
+header .submenu{display: none;}
+header .mainmenu{display: none;}
+header .searchbar{display: none;}
+header .logo{width: 60%; height: 70%; background: url(../images/mainlogo.PNG) no-repeat; background-size: contain; text-indent: -9999px; margin-left: 15px; position: absolute; top:25%; left: 0;}
+header .iconbox{margin: 0; position: absolute; top:40%; right: 0;}
+header .iconbox .icon{padding: 0 10px; float: left;}
+
+/*상단 타이틀 텍스트*/
+.title {text-align: center; margin:50px auto;}
+.title h1, .title h3{font-family: 'Nanum Myeongjo', sans-serif; padding: 15px; box-sizing: border-box;}
+.title h1{font-weight: 500;}
+.title h3{font-size: 1.2em;}
+.title p{display: inline-block; font-family: 'NanumSquare', sans-serif; font-size: 0.9em; border-bottom: 1px solid #000; text-align: center; padding-top: 20px; margin: 0 20px 50px 0;}
+
+/*주요 카테고리 소개*/
+.maincategory {font-family: 'Nanum Myeongjo', sans-serif; margin: 50px 0;}
+.maincategory h2{display: block; width: 80%; font-size: 1.8em; margin: 40px auto; text-align: center; font-weight: 500;}
+.maincategory .categorybox{display: block; width: 80%; margin: 0 auto;}
+.maincategory .categorybox img{width: 100%; margin: 0 auto; text-align: center;}
+.maincategory .categorybox a{display: block; margin: 10px auto; width: 60%; text-decoration: none; color: #000; text-align: center; border-bottom: 1px solid #000; }
+.maincategory .category02, .maincategory .category03, .maincategory .category04, .maincategory .category05{display: none;}
+
+/*메인테마 영역*/
+.theme {width: 100%; text-align: center; margin:50px auto;}
+.theme .themebox{width: 100%; margin: 0 auto;}
+.theme .themebox img{width: 100%; height: 100%;}
+.theme .themebox h2{margin: 40px 0 80px 0; font-family: 'Nanum Myeongjo', sans-serif; font-size: 1.2em;}
+.theme .themebox h2 a{color: #000; text-align: center; border-bottom: 1px solid #000; font-family: 'NanumSquare', sans-serif;font-size: 0.9rem;}
+.theme #themebox01{display: flex; flex-direction: column-reverse;}
+
+/*베스트셀러 영역*/
+.bestseler{width: 80%; font-family: 'Nanum Myeongjo', sans-serif; margin: 50px auto;}
+.bestseler h2{text-align: center; display: block; width: 80%; font-size: 1.3rem; line-height: 2rem; margin: 40px auto; text-align: center; font-weight: 500;}
+.bestseler .bestbox{background-color: #e9f5ff; position: relative;}
+.bestseler #bestbox01{width: 100%; height: 70vh; margin-bottom: 10px;}
+.bestseler #bestbox02, .bestseler #bestbox03{width: 48%; box-sizing: border-box; height: 40vh; margin-bottom: 80px;}
+.bestseler #bestbox02 {float: left;}
+.bestseler #bestbox03 {float: right;}
+.bestseler .bestbox img{display: block; width: 85%; margin: 0 auto; position: absolute; top: 50%; left: 50%; transform:translate(-50%, -50%);}
+.bestseler .bestbox a{display: none;}
+
+/*하단 웨지우드 스토리*/
+.history{clear: both; width: 100%; margin: 0 auto; font-family: 'Nanum Myeongjo', sans-serif; margin: 50px auto;}
+.history .historytitle{text-align: center; display: block; width: 80%; font-size: 1.3rem; line-height: 2rem; margin: 50px auto; text-align: center; font-weight: 500;}
+.history .historybox{width: 100%; margin: 0 auto; text-align: center;}
+.history .historybox .historytxt{margin: 40px 0 80px 0; font-family: 'Nanum Myeongjo', sans-serif; font-size: 1.3em;}
+.history .historybox .historytxt a{color: #000; text-align: center; border-bottom: 1px solid #000; font-family: 'NanumSquare', sans-serif; font-size: 0.9rem;}
+.history .historybox img{width: 100%;}
+.history #historybox01, .history #historybox03{display: flex; flex-direction: column-reverse;}
+.history > p{text-align: center; margin: 30px 0 80px 0;}
+
+/*푸터*/
+footer{width: 100%;}
+.footerbox{display: none;}
+#footerbox02{display: block; padding: 50px 0; border-top: 1px solid #e9f5ff; text-align: center;}
+#footerbox02 li strong{font-weight: 700; margin: 50px 0;}
+#footerbox02 li a{margin: 10px 0; color: #000;}
+footer .companybox{height: 300px; text-align: center; line-height: 20px; font-size: 0.6em;}
+footer .companybox .companytxt{background-color: #e9f5ff; padding: 50px 0;}
+
+
+
+/*PC 구현*/
+@media (min-width: 1440px){
+    body{padding: 0 5%;  margin: 0;}
+    /*텍스트 제어*/
+    .active{display: none;}
+
+    /*메인 내비게이션*/
+    header{ width: 100%; height: 100px; border-bottom: 1px solid #6b99cf;   border-top: 15px solid #6b99cf; overflow: hidden; position: relative;}
+    header .submenu{display: inline-block; width: 65vw; position: absolute; right: 0; border-bottom: 1px solid #6b99cf;padding: 10px;}
+    header .submenu li{padding: 0 5px; float: right; font-size: 0.75rem;}
+    header .mainmenu{display: block; position: absolute; right: 0;  bottom: 25px; width: 75%; text-align: center; text-indent: 20px;}
+    header .mainmenu li{padding: 0 1.1vw; font-size:0.9rem; }
+    header .mainmenu li:nth-child(1){text-indent: 70px;}
+    header .searchbar{width: 10%; padding: 6px; display: block; border-radius: 20px; border: 1px solid #6b99cf; position: absolute; right: 30px; bottom: 15px; text-indent: 10px;}
+    header ul li{float: left; font-family: 'NanumSquare', sans-serif;}
+    header ul li a{color: #000;}
+    header .iconbox{display: none;}
+    header .logo{display: block; z-index: 1; background-color: #fff;width: 28%;}
+
+    /*상단 타이틀 텍스트*/
+    .title{padding: 20px 0;} 
+
+    /*주요 카테고리 소개*/
+    .maincategory{padding: 30px; margin: 0 auto; height: 500px;}
+    .maincategory .category02, .maincategory .category03, .maincategory .category04, .maincategory .category05{display: inline-block;}
+    .maincategory h2{width: 100%; margin: 50px 0;}
+    .maincategory .categorybox{display: block; width: 20%; margin: 0 auto; float: left;}
+    .maincategory .categorybox img{width: 100%; margin: 0 auto; text-align: center;}
+    .maincategory .categorybox a{width: 80%;}
+
+    /*메인테마 영역*/
+    .theme {width: 100%; text-align: center; margin:50px auto;}
+    .theme .themebox{width: 100%; margin: 0 auto;}
+    .theme .themebox img{width: 50%;}
+
+    .theme #themebox01{display: flex; flex-direction: column; width: 100%; overflow: hidden; position: relative;}
+    .theme #themebox01 h2{justify-items: right; width: 50%;padding: 300px 0; margin: 80px 0;}
+    .theme #themebox01 img{float: right; width: 50%; position: absolute; top: 0; right: 0; margin: 80px 0;}
+    
+    .theme #themebox02{display: flex; flex-direction: column; width: 100%; overflow: hidden; position: relative;}
+    .theme #themebox02 h2{width: 50%; padding: 300px 0; position: absolute; top: 0; right: 0; margin: 80px 0;}
+    .theme #themebox02 img{width: 50%; margin: 80px 0;}
+
+    /*베스트셀러 영역*/
+    .bestseler {overflow: hidden;}
+    .bestseler h2{font-size: 1.5rem; margin-bottom: 100px;}
+    .bestseler .bestbox{background-color: #e9f5ff; position: relative;  float: left;}
+    .bestseler #bestbox01, .bestseler #bestbox02, .bestseler #bestbox03 {width: 30%; box-sizing: border-box; height: 50vh; margin-bottom: 80px;}
+    .bestseler .bestbox img{display: block; width: 85%; margin: 0 auto;     position: absolute; top: 50%; left: 50%; transform:translate(-50%, -50%);   }
+    .bestseler #bestbox02{margin: 0 3.5vw;}
+    .bestseler .bestbox a{display: block; position: absolute; bottom: 10px;     left: 50%; transform:translate(-50%, -50%); color: #000;    text-decoration: underline;}
+
+    /*하단 웨지우드 스토리*/
+
+    .history h2:nth-child(1){font-size: 1.3rem;}
+    .history .historybox img{width: 50%;}
+    .history #historybox01, .history #historybox02, .history #historybox03{display: block; position: relative; margin-bottom: 30px;}
+    .history #historybox01 h2, .history #historybox02 h2, .history #historybox03 h2{display: block; width: 50%; padding: 200px 0;}
+    .history #historybox01 img{position: absolute; top: 0; right: 0;}
+    .history #historybox02 h2{position: absolute; top: 0; right: 0}
+    .history #historybox02 img{display: block;}
+    .history #historybox03 img{position: absolute; top: 0; right: 0;}
+
+    /*푸터*/
+    footer{width: 100%; height: 250px; position: relative; border-top: 1px solid #e9f5ff;}
+    #footerbox02{display: block; text-align: left; border-top: none; padding: none;}
+    .footerbox{display: block; text-align: left; width: 17.5%; float: left; padding: 50px 0;}
+    .footerbox li strong{font-weight: 700; margin: 50px 0;}
+    .footerbox li a{margin: 10px 0; color: #000;}
+    footer .companybox{height: 300px; text-align: center; line-height: 20px; font-size: 0.6em;}
+    footer .companybox .companytxt{width: 30%; height:100%;background-color: #e9f5ff; padding: 30px 0; position: absolute; right: 0; box-sizing: border-box; margin: 0;}
+}

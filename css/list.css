@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*메인 내비게이션*/
+header{ width: 100%; height: 100px; border-bottom: 1px solid #6b99cf; border-top: 15px solid #6b99cf; overflow: hidden; position: relative;}
+header .submenu{display: none;}
+header .mainmenu{display: none;}
+header .searchbar{display: none;}
+header .logo{width: 60%; height: 70%; background: url(../images/mainlogo.PNG) no-repeat; background-size: contain; text-indent: -9999px; margin-left: 15px; position: absolute; top:25%; left: 0;}
+header .iconbox{margin: 0; position: absolute; top:40%; right: 0;}
+header .iconbox .icon{padding: 0 10px; float: left;}
+
+
+/*이미지 영역*/
+.titleimg{width: 100%;}
+.titleimg .timg01{width: 100%;}
+.titleimg .timg02{display: none;}
+
+/*상단 안내박스*/
+.category {width: 100%; height: 60px; padding: 10px 20px; box-sizing: border-box;}
+.category p{float: left; line-height: 40px;}
+.category li{float: right; display: none;}
+.category .active{display: block; border-bottom: 1px solid #ddd; padding: 10px; width: 150px;}
+.category .active strong{padding-left: 65px;}
+
+/*제품 영역박스*/
+.itemspace {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around;}
+.itemspace .itembox{width: 40%; margin: 30px 0;}
+.itemspace .itembox img{width: 100%;}
+.itemspace .itembox p {text-align: center;}
+.itemspace .itembox p > a{width: 100%; color: #000;}
+.itemspace #itembox09{display: none;}
+
+/*카테고리 넘김 바*/
+.numberbox{width: 100%; display: flex; justify-content: center;}
+.numberbox ul{overflow: hidden;}
+.numberbox ul li{text-align: center; float: left; padding: 30px 10px;}
+.numberbox ul li a{color: #000;}
+
+/*푸터*/
+footer{width: 100%;}
+.footerbox{display: none;}
+#footerbox02{display: block; padding: 50px 0; border-top: 1px solid #e9f5ff; text-align: center;}
+#footerbox02 li strong{font-weight: 700; margin: 50px 0;}
+#footerbox02 li a{margin: 10px 0; color: #000;}
+footer .companybox{height: 300px; text-align: center; line-height: 20px; font-size: 0.6em;}
+footer .companybox .companytxt{background-color: #e9f5ff; padding: 50px 0;}
+
+
+/*PC 구현*/
+@media (min-width: 1440px){
+    body{padding: 0 5%; margin: 0;}
+    /*텍스트 제어*/
+    .active{display: none;}
+
+    /*메인 내비게이션*/
+    header{ width: 100%; height: 100px; border-bottom: 1px solid #6b99cf;   border-top: 15px solid #6b99cf; overflow: hidden; position: relative;}
+    header .submenu{display: inline-block; width: 65vw; position: absolute; right: 0; border-bottom: 1px solid #6b99cf;padding: 10px;}
+    header .submenu li{padding: 0 5px; float: right; font-size: 0.75rem;}
+    header .mainmenu{display: block; position: absolute; right: 0;  bottom: 25px; width: 75%; text-align: center; text-indent: 20px;}
+    header .mainmenu li{padding: 0 1.1vw; font-size:0.9rem; }
+    header .mainmenu li:nth-child(1){text-indent: 70px;}
+    header .searchbar{width: 10%; padding: 6px; display: block; border-radius: 20px; border: 1px solid #6b99cf; position: absolute; right: 30px; bottom: 15px; text-indent: 10px;}
+    header ul li{float: left; font-family: 'NanumSquare', sans-serif;}
+    header ul li a{color: #000;}
+    header .iconbox{display: none;}
+    header .logo{display: block; z-index: 1; background-color: #fff;width: 28%;}
+
+    /*이미지 영역*/
+    .titleimg .timg02{display: block; width: 100%;}
+
+    /*상단 안내박스*/
+    .category {width: 100%; height: 60px; padding: 10px 20px; box-sizing: border-box; position: relative;}
+    .category ul{position: absolute; right: 10px;}
+    .category li{float: left; display: block; line-height: 40px; padding: 0 5px;}
+    .category .active{display: none;}
+
+    /*제품 영역박스*/
+    .itemspace {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around;}
+    .itemspace .itembox{width: 30%; margin: 30px 0;}
+    .itemspace #itembox09{display: block;}
+
+    /*카테고리 넘김 바*/
+    .numberbox ul li{padding: 60px 10px;}
+
+    /*푸터*/
+    footer{width: 100%; height: 250px; position: relative; border-top: 1px solid #e9f5ff;}
+    #footerbox02{display: block; text-align: left; border-top: none; padding: none;}
+    .footerbox{display: block; text-align: left; width: 17.5%; float: left; padding: 50px 0;}
+    .footerbox li strong{font-weight: 700; margin: 50px 0;}
+    .footerbox li a{margin: 10px 0; color: #000;}
+    footer .companybox{height: 300px; text-align: center; line-height: 20px; font-size: 0.6em;}
+    footer .companybox .companytxt{width: 30%; height:100%;background-color: #e9f5ff; padding: 30px 0; position: absolute; right: 0; box-sizing: border-box; margin: 0;}
+}

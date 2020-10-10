@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/*메인 내비게이션*/
+header{ width: 100%; height: 100px; border-bottom: 1px solid #6b99cf; border-top: 15px solid #6b99cf; overflow: hidden; position: relative;}
+header .submenu{display: none;}
+header .mainmenu{display: none;}
+header .searchbar{display: none;}
+header .logo{width: 60%; height: 70%; background: url(../images/mainlogo.PNG) no-repeat; background-size: contain; text-indent: -9999px; margin-left: 15px; position: absolute; top:25%; left: 0;}
+header .iconbox{margin: 0; position: absolute; top:40%; right: 0;}
+header .iconbox .icon{padding: 0 10px; float: left;}
+
+
+
+/*제품정보영역*/
+.itemimg{width: 100%; display: flex; justify-content: center;}
+.itemimg img{width: 90%;}
+.iteminfo{padding: 0 40px; box-sizing: border-box; font-family: 'NanumSquare', sans-serif;}
+.item_category{font-size: 0.8rem;}
+.item_title{font-size: 1.5rem; padding: 10px 0;}
+.item_id{font-size: 0.6rem; color: #555;}
+.item_price{font-size: 1.3rem; padding: 10px 0; font-weight: 700;}
+.item_delivery{font-size: 1.1rem; padding: 10px 0;}
+.info_item, .info_basic{font-size: 1.1rem; font-weight: 700; width: 100%; padding: 20px 10px; border-bottom: 3px solid #000; box-sizing:border-box; margin-bottom: 10px;}
+.btnbox{width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.btnbox .buy{width: 100%; height: 60px; background-color: #6b99cf; color: #fff; border: none; margin: 10px 0;}
+.btnbox .cart, .btnbox .wishlist{width: 48%;  height: 60px;color: #fff; border: none;}
+.btnbox .cart{background-color: #90ccfc;}
+.btnbox .wishlist{background-color: #9baec4;}
+
+/*상품 소개영역*/
+.introduce {width: 100%; padding: 0 40px; box-sizing: border-box; font-family: 'NanumSquare', sans-serif; margin: 50px 0;}
+.introduce h2{font-size: 1.5rem; text-indent: 10px;}
+.introduce img{width: 100%; margin: 20px 0;}
+
+/*추가 정보영역*/
+.infomation {width: 100%; padding: 0 40px; box-sizing: border-box; font-family: 'NanumSquare', sans-serif;}
+.infomation .info_delivery h2, .infomation .info_exchange h2{font-size: 1.4rem; padding: 20px 0;}
+.infomation .info_delivery p, .infomation .info_exchange p{font-size: 1.1rem; padding: 15px 0;}
+.infomation .info_delivery p>span, .infomation .info_exchange p>span{font-size: 0.9rem;}
+.infomation .info_exchange{margin: 30px 0; border-top: 1px solid #e9f5ff;}
+
+
+/*푸터*/
+footer{width: 100%;}
+.footerbox{display: none;}
+#footerbox02{display: block; padding: 50px 0; border-top: 1px solid #e9f5ff; text-align: center;}
+#footerbox02 li strong{font-weight: 700; margin: 50px 0;}
+#footerbox02 li a{margin: 10px 0; color: #000;}
+footer .companybox{height: 300px; text-align: center; line-height: 20px; font-size: 0.6em;}
+footer .companybox .companytxt{background-color: #e9f5ff; padding: 50px 0;}
+
+
+/*PC 구현*/
+@media (min-width: 1440px){
+    body{padding: 0 5%; margin: 0; }
+    /*텍스트 제어*/
+    .active{display: none;}
+
+    /*메인 내비게이션*/
+    header{ width: 100%; height: 100px; border-bottom: 1px solid #6b99cf;   border-top: 15px solid #6b99cf; overflow: hidden; position: relative;}
+    header .submenu{display: inline-block; width: 65vw; position: absolute; right: 0; border-bottom: 1px solid #6b99cf;padding: 10px;}
+    header .submenu li{padding: 0 5px; float: right; font-size: 0.75rem;}
+    header .mainmenu{display: block; position: absolute; right: 0;  bottom: 25px; width: 75%; text-align: center; text-indent: 20px;}
+    header .mainmenu li{padding: 0 1.1vw; font-size:0.9rem; }
+    header .mainmenu li:nth-child(1){text-indent: 70px;}
+    header .searchbar{width: 10%; padding: 6px; display: block; border-radius: 20px; border: 1px solid #6b99cf; position: absolute; right: 30px; bottom: 15px; text-indent: 10px;}
+    header ul li{float: left; font-family: 'NanumSquare', sans-serif;}
+    header ul li a{color: #000;}
+    header .iconbox{display: none;}
+    header .logo{display: block; z-index: 1; background-color: #fff;width: 28%;}
+
+
+    /*제품정보영역*/
+    .itemimg{float: left; width: 70%; display: flex; justify-content: center;}
+    .itemimg img{width: 90%;}
+    .iteminfo{float: right; width: 30%; padding: 150px 40px 200px 40px; box-sizing: border-box; font-family: 'NanumSquare', sans-serif;}
+
+
+    /*상품 소개영역*/
+    .introduce {width: 100%; clear: both; margin: 50px 0; display: flex; justify-content: space-between; flex-wrap: wrap;}
+    .introduce h2{font-size: 1.5rem; text-indent: 10px;}
+    .introduce {width: 100%; margin: 20px 0;}
+    .introduce .bigimg{width: 100%;}
+    .introduce .middleimg{width: 48%;}
+    /*추가 정보영역*/
+
+
+
+
+    /*푸터*/
+    footer{width: 100%; height: 250px; position: relative; border-top: 1px solid #e9f5ff;}
+    #footerbox02{display: block; text-align: left; border-top: none; padding: none;}
+    .footerbox{display: block; text-align: left; width: 17.5%; float: left; padding: 50px 0;}
+    .footerbox li strong{font-weight: 700; margin: 50px 0;}
+    .footerbox li a{margin: 10px 0; color: #000;}
+    footer .companybox{height: 300px; text-align: center; line-height: 20px; font-size: 0.6em;}
+    footer .companybox .companytxt{width: 30%; height:100%;background-color: #e9f5ff; padding: 30px 0; position: absolute; right: 0; box-sizing: border-box; margin: 0;}
+}
