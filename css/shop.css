@@ -121,7 +121,7 @@ footer .companybox .companytxt{background-color: #e9f5ff; padding: 50px 0;}
     .history h2:nth-child(1){font-size: 1.3rem;}
     .history .historybox img{width: 50%;}
     .history #historybox01, .history #historybox02, .history #historybox03{display: block; position: relative; margin-bottom: 30px;}
-    .history #historybox01 h2, .history #historybox02 h2, .history #historybox03 h2{display: block; width: 50%; padding: 200px 0;}
+    .history #historybox01 h2, .history #historybox02 h2, .history #historybox03 h2{display: block; width: 50%; padding: 250px 0;}
     .history #historybox01 img{position: absolute; top: 0; right: 0;}
     .history #historybox02 h2{position: absolute; top: 0; right: 0}
     .history #historybox02 img{display: block;}

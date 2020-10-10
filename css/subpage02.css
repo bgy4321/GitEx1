@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+body{
+    position: relative;
+    height: calc(100vh - 80px);
+    /* font-family: 'NanumSquare', 'Roboto', sans-serif; */
+}
+::selection {
+    background-color: purple;
+    color: #fff;
+  }
+
+/*상단/좌우 고정 부분*/
+.nav{
+  position: fixed; top: 0; left: 60px;
+  width: calc(100% - 120px); height: 80px;
+  margin:0 auto; z-index: 1;
+  display: flex; flex-direction: row; background-color: #fff;
+}
+.nav p{
+  padding: 18.5px 0; padding-left: 10px;
+  position: relative;
+}
+.nav a > img{
+  position: absolute;
+  top: 18.5px;
+}
+.nav p>a{            
+  position: absolute; top: 18.5px; left: 45px;
+  text-decoration: none; font-size: 2em; font-weight: bold;
+  color: #000000;
+}
+.left{
+  font-family: 'Roboto', sans-serif; 
+  width: 60px; height: 100vh;
+  font-size: 18px;
+  position: fixed; top: 0; left: 0;
+  background-color: #fff;
+}
+.left p{
+  text-align: center;
+  width: 100vh;
+  transform: rotate(270deg);
+  transform-origin: right center;
+  position: absolute; top: 0; right: 50%;
+  white-space: nowrap;
+}
+
+
+.right{
+  z-index:9999;
+  height: 100vh;
+  position: fixed; top: 0; right: 0;cursor: pointer;
+  transform: translateX(330px);transition:0.5s;
+}
+.right .righttxt{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  width: 100vh; background-color: #fff;
+  height:60px; line-height:60px;
+  font-size: 18px;
+  transform: rotate(90deg); transform-origin: left center; 
+  position: absolute; top: 0;
+  white-space: nowrap;
+  z-index: 3;
+}
+.right .rightmenu{
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1.2em; font-weight: 700;
+  margin-top: 80px;
+  width: 360px; height:100vh;
+  background-color: #fff;
+  
+}
+.rightmenu a{
+  display: block;
+  height:100%; width:100%;
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+}
+.rightmenu li:hover{
+  background-color: #999; color: #fff;
+}
+.right .rightmenu li{
+  width: 360px; height: 15.23vh;
+  box-sizing: border-box; padding: 30px 0 30px 60px;
+}
+.active{ transform: translateX(0);}
+
+/*가로사이즈 고정 및 중앙배열 */
+    .slider-container, .worktxtbox, footer{
+  display: block;
+  width: calc(100% - 120px);
+  margin: 0 auto;
+      
+}
+  
+    /*작업물 영역*/
+     .slider-container {
+   margin-top: 80px; 
+         height: 100%;
+         overflow: hidden;
+         position: relative;
+         height: 100%;
+         user-select: none;
+         cursor: all-scroll;
+    }
+     .slider-control {
+         z-index: 1;
+         position: absolute;
+         top: 0;
+         width: 12%;
+         height: 100%;
+         transition: opacity 0.3s;
+         will-change: opacity;
+         opacity: 0;
+    }
+
+     .slider {
+         z-index: 2;
+         position: relative;
+         height: 100%;
+    }
+
+     .slide {
+         position: absolute;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+    }
+     .slide.active .slide__overlay, .slide.active .slide__text {
+         opacity: 1;
+         transform: translateX(0);
+    }
+     .slide__bg {
+         position: absolute;
+         top: 0;
+         left: -50%;
+         width: 100%;
+         height: 100%;
+         background-size: cover;
+         will-change: transform;
+    }
+     .slide:nth-child(1) {
+         left: 0;
+    }
+     .slide:nth-child(1) .slide__bg {
+         left: 0;
+  text-align: center;
+  background-color: #000;
+    }
+
+
+/*work space*/
+.workbox{
+  width: calc(100% - 120px);
+  height: 1550px;
+  background-color: #e9e8ef;
+  padding: 140px 150px 150px; box-sizing: border-box;
+  margin-left: 60px;
+  position: relative;
+}
+.workbox .worktitle{
+  font-family: 'Roboto', sans-serif; font-size: 100px; font-weight: 700;
+  color: #e9e8ef;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  text-align: center;
+}
+.workbox h3{
+  font-family: 'Roboto', sans-serif; font-size: 46px; font-weight: 500;
+  text-align: center;
+  padding-top: 15px;
+}
+.workbox .worktxtbox{
+  float: left;
+  width: 60%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+.workbox .worktxtbox .contents{
+  font-family: 'NanumSquare', 'Roboto', sans-serif;
+  margin: 80px 0;
+}
+.workbox .worktxtbox .box1 p{
+  padding-bottom: 80px;
+  border-bottom: black solid 1px;
+}
+.workbox .worktxtbox .contents #regular{
+  font-weight: 400;
+}
+.workbox .worktxtbox .contents #bold{
+  font-weight: 700;
+}
+.workbox .worktxtbox .contents h2{
+  font-size: 44px;
+  font-weight: 400;
+  margin-top: 50px;
+}
+.workbox .worktxtbox .contents p{
+  font-size: 22px;
+  font-weight: 300;
+  margin: 30px 0;
+  line-height: 30px;
+}
+.workbox .worktxtbox .box2 p{
+  font-size: 32px;
+  line-height: 40px;
+  padding-bottom: 80px;
+  border-bottom: black solid 1px;
+}
+
+.workbox .workside{
+  float: left;
+  width: 40%;
+  padding: 40px 100px 40px 100px;
+  box-sizing: border-box;
+}
+.workbox .workside .worksidebox{
+  width: 100%;
+  font-family: 'NanumSquare', 'Roboto', sans-serif;
+  margin: 80px 0 120px 0;
+}
+.workbox .workside .worksidebox h2{
+  width: 80%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 34px; font-weight: 700;
+  margin-top: 50px;
+  border-bottom: black solid 1px;
+}
+.workbox .workside .worksidebox p{
+  font-size: 26px; font-weight: 300;
+  margin: 20px 0;
+}
+.workbox .workside .worksidebox span{
+  font-size: 14px;
+}
+.workbox .btnbox{
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}
+
+.workbox .btnbox a button{
+  padding: 10px 20px;
+  background-color: #e9e8ef; 
+  border: #000 solid 1px;
+}
+
+
+/*footer*/
+footer {
+    background-color: #fff;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+footer a{
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    transform:translate(-50%, -50%);
+}

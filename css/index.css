@@ -191,6 +191,12 @@ header img{
     display: block;
     height:100%; width:100%;
     color: black;
+    position: relative;
+}
+.portfolio .portbox a img{
+    width: 60%;
+    position: absolute;
+    bottom: 5px; right: 5px;
 }
 .portfolio .box1, .portfolio .box4{
     margin-left: 0px;
