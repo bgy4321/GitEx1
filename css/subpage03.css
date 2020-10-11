@@ -226,7 +226,7 @@ body{
     }
      .slide:nth-child(3) .slide__bg {
          left: -100%;
-         background-image: url('../images/subimg2_3.PNG');
+         background-image: url('../images/subimg2_3.png');
    background-size: cover;
     }
 
@@ -236,7 +236,7 @@ body{
     }
      .slide:nth-child(4) .slide__bg {
          left: -150%;
-         background-image: url('../images/subimg2_4.PNG');
+         background-image: url('../images/subimg2_4.png');
    background-size: cover;
     }
 
