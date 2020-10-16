@@ -162,9 +162,9 @@ body{
 /*work space*/
 .workbox{
   width: calc(100% - 120px);
-  height: 1700px;
+  height: 1830px;
   background-color: #e9e8ef;
-  padding: 140px 150px 150px; box-sizing: border-box;
+  padding: 140px 150px 0 150px; box-sizing: border-box;
   margin-left: 60px;
   position: relative;
 }
@@ -183,6 +183,7 @@ body{
   float: left;
   width: 60%;
   padding: 40px;
+  padding-bottom: 0;
   box-sizing: border-box;
 }
 .workbox .worktxtbox .contents{
@@ -211,16 +212,15 @@ body{
   line-height: 38px;
 }
 .workbox .worktxtbox .box2 p{
-  font-size: 32px;
+  font-size: 22px;
   line-height: 40px;
   padding-bottom: 80px;
-  border-bottom: black solid 1px;
 }
 
 .workbox .workside{
   float: left;
   width: 40%;
-  padding: 40px 100px 40px 100px;
+  padding: 40px 5.208vw 40px 5.208vw;
   box-sizing: border-box;
 }
 .workbox .workside .worksidebox{
@@ -238,21 +238,31 @@ body{
 .workbox .workside .worksidebox p{
   font-size: 26px; font-weight: 300;
   margin: 20px 0;
+  line-height: 45px;
 }
 .workbox .workside .worksidebox span{
   font-size: 14px;
 }
-.workbox .btnbox{
+.workbox .review{
+  margin-top: 30px;
+  display: block;
+  width: 80%;
   position: absolute;
-  bottom: 1%;
-  left: 50%;
-  transform:translate(-50%, -50%);
+  bottom: 4vw;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
-
-.workbox .btnbox a button{
-  padding: 10px 20px;
-  background-color: #e9e8ef; 
-  border: #000 solid 1px;
+.workbox .review h2{
+  font-size: 44px;
+  font-weight: 400;
+  border-top: 1px solid #000;
+  padding-top: 80px;
+}
+.workbox .review p{
+  font-size: 22px;
+  font-weight: 300;
+  margin: 30px 0;
+  line-height: 38px;
 }
 
 
